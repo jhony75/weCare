@@ -1,0 +1,73 @@
+@use './variables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 16px;
+  color: variables.$textColor;
+}
+
+.Card {
+  overflow: hidden;
+  box-shadow: 0 0.125rem 1.25rem variables.$jacaranda;
+  border-radius: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+
+  &__Image {
+    height: 12rem;
+    width: 100%;
+    object-fit: cover;
+    grid-row: 1/2;
+  }
+
+  &__Title {
+    font-family: variables.$titleFont;
+    padding: 1rem;
+    grid-row: 2/3;
+  }
+
+  &__Description {
+    padding: 0 1rem;
+    grid-row: 2/3;
+  }
+
+  &__Button {
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 0.125rem solid variables.$redViolet;
+    background: #fff;
+    color: variables.$textColor;
+    border-radius: 0.2rem;
+    transition: background 200 ease-in, color 200ms ease-in;
+    grid-row: 3/4;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  &:hover &__Button {
+    background: variables.$ultraViolet;
+    color: variables.$sparklingGrape;
+  }
+}
+
+.CardWrapper {
+  font-family: variables.$defaultFont;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50% 30% 20%;
+  gap: 2rem;
+  justify-content: center;
+}

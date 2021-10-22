@@ -1,0 +1,54 @@
+@use './variables.scss';
+
+html {
+  font-size: 16px;
+  font-family: variables.$defaultFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: variables.$titleFont;
+}
+
+body {
+  color: variables.$textColor;
+  background-color: variables.$rhapsody;
+}
+
+.Layout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2.5rem auto;
+}
+
+nav .Links {
+  display: inline-block;
+  text-align: right;
+}
+
+nav a {
+  display: inline-block;
+  margin-left: 1.25rem;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+  border-color: variables.$chateauRose;
+}
+
+footer p {
+  text-align: center;
+  color: variables.$textColor;
+  margin: 2.5rem auto;
+}
