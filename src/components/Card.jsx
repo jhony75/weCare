@@ -1,17 +1,21 @@
+import { Link } from 'gatsby';
 import React from 'react';
 
 import * as styles from '../styles/card.module.scss';
 
 function Card(props) {
   return (
-    <div className={styles.Card}>
-      <div className={styles.CardWrapper}>
-        <div className={styles.Card__Body}>
-          <img classname={styles.Card__Image} src={props.img}></img>
-          <h2 className={styles.Card__Title}>{props.title}</h2>
-          <p className={styles.Card__Description}>{props.desc}</p>
+    <div className={styles.container}>
+      <div className={styles.card}>
+        <div className={styles.cardHeader}>
+          <img src={props.img} alt={props.alt} />
         </div>
-        <button className={styles.Card__Button}>Saiba mais!</button>
+        <div className={styles.cardBody}>
+          <h2 className={styles.HeaderLink}>
+            <Link to={props.link}> {props.title} </Link>
+          </h2>
+          <p>{props.text}</p>
+        </div>
       </div>
     </div>
   );

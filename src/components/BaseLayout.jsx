@@ -10,7 +10,7 @@ function BaseLayout({ children }) {
       <div className="Navbar">
         <Navbar />
       </div>
-      <div className="Content">{children}</div>
+      <div className="NotContent">{children}</div>
       <div className="Footer">
         <Footer />
       </div>

@@ -1,7 +1,7 @@
 @use './variables.scss';
 
 html {
-  font-size: 16px;
+  font-size: 20px;
   font-family: variables.$defaultFont;
 }
 
@@ -14,13 +14,19 @@ h6 {
   font-family: variables.$titleFont;
 }
 
+h1 {
+  text-align: center;
+}
+
 body {
   color: variables.$textColor;
-  background-color: variables.$rhapsody;
+  // color: #fff;
+  // background-color: variables.$rhapsody;
+  background-color: variables.$ultraViolet;
 }
 
 .Layout {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -35,6 +41,10 @@ nav .Links {
   text-align: right;
 }
 
+a {
+  text-decoration: none;
+}
+
 nav a {
   display: inline-block;
   margin-left: 1.25rem;
@@ -45,6 +55,18 @@ nav a {
 
 nav a:hover {
   border-color: variables.$chateauRose;
+}
+
+a:link {
+  color: variables.$mullberry;
+}
+
+a:visited {
+  color: variables.$prismPink;
+}
+
+a:hover {
+  color: variables.$chateauRose;
 }
 
 footer p {

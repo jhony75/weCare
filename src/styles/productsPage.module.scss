@@ -1,0 +1,11 @@
+@use './variables.scss';
+
+.ProductsPage {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  justify-content: space-around;
+  align-content: space-around;
+}
